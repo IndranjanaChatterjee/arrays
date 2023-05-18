@@ -1,0 +1,72 @@
+#include<stdio.h>
+int main()
+{
+	int a[3][3];
+	int i,j;
+	printf("enter");
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	int sum=0;
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			if(a[i][j]==0)
+			{
+			  sum+=1;	
+			}
+		}
+	}
+	if(sum>(9/2))
+	{
+		printf("sparse");
+	}
+	else
+	{
+		printf("not");
+	}
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			if(i==j)
+			{
+			  if(a[i][j]==1)
+			  {
+			  	continue;
+			  }	
+			  else
+			  {
+			  	printf("no");
+			  	break;
+			  }
+			}
+			else
+			{
+				if(a[i][j]==0)
+			  {
+			  	continue;
+			  }	
+			  else
+			  {
+			  	printf("no");
+			  	break;
+			  }
+			}
+		}
+		if(j!=3)
+		{
+			break;
+		}
+	}
+	if(i==3)
+	{
+		printf("identity");
+	}
+	return 0;
+}
