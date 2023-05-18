@@ -1,2 +1,2 @@
-# arrays
-Array programs in c
+# Arrays
+## Array Programs in C.
